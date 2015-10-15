@@ -1,0 +1,25 @@
+{
+  "name": "qmlstructure",
+  "version": "1.0.0",
+  "description": "qmlstructure",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minicast/qmlstructure.git"
+  },
+  "keywords": [
+    "qmlstructure"
+  ],
+  "author": "minicast <minicast@gmx.com> (https://github.com/minicast)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minicast/qmlstructure/issues"
+  },
+  "homepage": "https://github.com/minicast/qmlstructure#readme",
+  "dependencies": {
+    "pegjs": "0.9.0"
+  }
+}
