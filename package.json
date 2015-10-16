@@ -1,14 +1,15 @@
 {
   "name": "qmlstructure",
-  "version": "0.0.1-beta.0",
   "description": "qmlstructure",
+  "version": "0.0.0-semantically-releasead",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w"
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/minicast/qmlstructure.git"
+    "url": "https://github.com/minicast/qmlstructure.git"
   },
   "keywords": [
     "qmlstructure"
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "3.3.0",
-    "mocha": "2.3.3"
+    "mocha": "2.3.3",
+    "semantic-release": "^4.3.5"
   }
 }
