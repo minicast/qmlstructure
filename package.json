@@ -2,6 +2,7 @@
   "name": "qmlstructure",
   "description": "qmlstructure",
   "version": "0.0.0-semantically-releasead",
+  "node-version": "4.2.0",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha src/index.test.js -w",
