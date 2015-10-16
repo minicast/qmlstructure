@@ -1,3 +1,5 @@
+/* jshint ignore: start */
+/* eslint-disable */
 /*
  * QML Structure Grammar
  * ============================
@@ -70,12 +72,12 @@ tuple3 "tuple3"
   }
 
 binaryExtensionsList "binaryExtensionsList"
-  = head:(binaryExtension)* tail:("," binaryExtension)* {
+  = _ head:(binaryExtension)* _ tail:("," binaryExtension)* _ {
     return head.concat(tail.map((x) => x[1]))
   }
 
 binaryExtension "binaryExtension"
-  = relation:relation tuples2Set:tuples2Set {
+  = _ relation:relation _ tuples2Set:tuples2Set _ {
     return {
       relation: relation,
       arity: 2,
@@ -84,12 +86,12 @@ binaryExtension "binaryExtension"
   }
 
 tuples2Set "tuples2Set"
-  = "{" tuples2List:tuples2List "}" {
+  = "{" _ tuples2List:tuples2List _ "}" {
     return tuples2List
   }
 
 tuples2List "tuples2List"
-  = head:(tuple2)* tail:("," tuple2)* {
+  = _ head:(tuple2)* _ tail:("," tuple2)* _ {
     return head.concat(tail.map((x) => x[1]))
   }
 
@@ -99,17 +101,17 @@ tuple2 "tuple2"
   }
 
 unaryExtensionsSet "unaryExtensionsSet"
-  = "{" unaryExtensionsList:unaryExtensionsList "}" {
+  = _ "{" _ unaryExtensionsList:unaryExtensionsList _ "}" _ {
     return { unaryExtensions: unaryExtensionsList }
   }
 
 unaryExtensionsList "unaryExtensionsList"
-  = head:(unaryExtension)* tail:("," unaryExtension)* {
+  = _ head:(unaryExtension)* _ tail:("," unaryExtension)* _ {
     return head.concat(tail.map((x) => x[1]))
   }
 
 unaryExtension "unaryExtension"
-  = relation:relation tuples1Set:tuples1Set {
+  = _ relation:relation _ tuples1Set:tuples1Set _ {
     return {
       relation: relation,
       arity: 1,
