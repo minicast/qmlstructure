@@ -1,7 +1,8 @@
 /* eslint no-unused-expressions: false */
 /* jshint -W030 */
 
-const expect = require('chai').expect;
+// const expect = require('chai').expect;
+import {expect} from 'chai';
 const qmlStructure = require('./index.js');
 
 describe("qmlStructureParser", function () {
