@@ -58,7 +58,8 @@ const structure2d3 = (structureString) => {
 
 module.exports = {
   parser: qmlStructureParser,
-  getD3: structure2d3
+  getD3: structure2d3,
+  getLatex: "getLatex"
 };
 
 
