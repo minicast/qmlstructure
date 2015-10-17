@@ -1,13 +1,13 @@
 {
   "name": "qmlstructure",
   "description": "qmlstructure",
-  "version": "0.0.0",
   "engines": {
     "node": ">=4.0.0",
     "npm": ">=2.0.0"
   },
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha src/index.test.js",
     "testw": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -31,7 +31,12 @@
   },
   "devDependencies": {
     "chai": "3.3.0",
+    "commitizen": "2.1.0",
+    "cz-conventional-changelog": "1.1.4",
     "mocha": "2.3.3",
     "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
