@@ -3,8 +3,8 @@
 
 // const fs = require("fs");
 import fs from "fs";
+import _ from "lodash";
 const PEG = require("pegjs");
-const _ = require("lodash");
 
 const qmlStructureGrammar = fs.readFileSync(
   "./src/qmlStructureGrammar.pegjs",
