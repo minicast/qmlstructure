@@ -52,24 +52,24 @@ possibleWorld "possibleWorld"
     }
   }
 
-metanominalsSet "metanominalsSet"
-  = "{" metanominalsList:metanominalsList "}" {
-    return metanominalsList
-  }
+// metanominalsSet "metanominalsSet"
+//   = "{" metanominalsList:metanominalsList "}" {
+//     return metanominalsList
+//   }
 
 metanominalsList "metanominalsList"
   = head:(metanominal)* tail:("," metanominal)* {
     return head.concat(tail.map((x) => x[1]))
   }
 
-tuple4 "tuple4"
-  = "(" constant "," constant "," constant "," constant ")" {
-    return "(" + c1 + "," + c2 + ")"
-  }
-tuple3 "tuple3"
-  = "(" constant "," constant "," constant ")"  {
-    return "(" + c1 + "," + c2 + ")"
-  }
+// tuple4 "tuple4"
+//   = "(" constant "," constant "," constant "," constant ")" {
+//     return "(" + c1 + "," + c2 + ")"
+//   }
+// tuple3 "tuple3"
+//   = "(" constant "," constant "," constant ")"  {
+//     return "(" + c1 + "," + c2 + ")"
+//   }
 
 binaryExtensionsList "binaryExtensionsList"
   = _ head:(binaryExtension)* _ tail:("," binaryExtension)* _ {
@@ -100,10 +100,10 @@ tuple2 "tuple2"
     return "(" + c1 + "," + c2 + ")"
   }
 
-unaryExtensionsSet "unaryExtensionsSet"
-  = _ "{" _ unaryExtensionsList:unaryExtensionsList _ "}" _ {
-    return { unaryExtensions: unaryExtensionsList }
-  }
+// unaryExtensionsSet "unaryExtensionsSet"
+//   = _ "{" _ unaryExtensionsList:unaryExtensionsList _ "}" _ {
+//     return { unaryExtensions: unaryExtensionsList }
+//   }
 
 unaryExtensionsList "unaryExtensionsList"
   = _ head:(unaryExtension)* _ tail:("," unaryExtension)* _ {
@@ -140,7 +140,6 @@ constantsList "constantsList"
   = head:(constant)* tail:("," constant)* {
     return head.concat(tail.map((x) => x[1]))
   }
-
 
 metanominal "metanominal"
   = metanominalString:[wvtl]+ index:index {

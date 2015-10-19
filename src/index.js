@@ -4,13 +4,14 @@
 // const fs = require("fs");
 import fs from "fs";
 import _ from "lodash";
-const PEG = require("pegjs");
+// const PEG = require("pegjs");
+const qmlStructureParser = require("./qmlStructureParser.js");
 
-const qmlStructureGrammar = fs.readFileSync(
-  "./src/qmlStructureGrammar.pegjs",
-  "utf8"
-);
-const qmlStructureParser = PEG.buildParser(qmlStructureGrammar);
+// const qmlStructureGrammar = fs.readFileSync(
+//   "./src/qmlStructureGrammar.pegjs",
+//   "utf8"
+// );
+// const qmlStructureParser = PEG.buildParser(qmlStructureGrammar);
 
 const getMetadomain = (structure) => {
   return structure.map((x) => {
